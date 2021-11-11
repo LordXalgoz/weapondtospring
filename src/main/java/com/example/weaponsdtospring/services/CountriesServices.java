@@ -1,7 +1,7 @@
 package com.example.weaponsdtospring.services;
 
-import com.example.weaponsdtospring.repositories.CountriesRepositories;
-import com.example.weaponsdtospring.repositories.WeaponsRepositories;
+import com.example.weaponsdtospring.repositories.CountriesRepository;
+import com.example.weaponsdtospring.repositories.WeaponsRepository;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -9,17 +9,17 @@ import org.springframework.stereotype.Service;
 @Service
 public class CountriesServices {
     @Autowired
-    private final CountriesRepositories countriesRepositories;
+    private final CountriesRepository countriesRepository;
 
     @Autowired
-    private final WeaponsRepositories weaponsRepositories;
+    private final WeaponsRepository weaponsRepository;
 
     @Autowired
     private final ModelMapper modelMapper;
 
-    public CountriesServices(CountriesRepositories countriesRepository, WeaponsRepositories weaponsRepositories, ModelMapper modelMapper) {
-        this.countriesRepositories = countriesRepository;
-        this.weaponsRepositories = weaponsRepositories;
+    public CountriesServices(CountriesRepository countriesRepository, WeaponsRepository weaponsRepository, ModelMapper modelMapper) {
+        this.countriesRepository = countriesRepository;
+        this.weaponsRepository = weaponsRepository;
         this.modelMapper = modelMapper;
     }
 }

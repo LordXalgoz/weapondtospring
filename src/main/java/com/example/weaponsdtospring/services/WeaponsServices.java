@@ -1,7 +1,7 @@
 package com.example.weaponsdtospring.services;
 
 import com.example.weaponsdtospring.dtos.WeaponDto;
-import com.example.weaponsdtospring.repositories.WeaponsRepositories;
+import com.example.weaponsdtospring.repositories.WeaponsRepository;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -12,12 +12,12 @@ import java.util.stream.Collectors;
 @Service
 public class WeaponsServices {
     @Autowired
-    private final WeaponsRepositories weaponsRepository;
+    private final WeaponsRepository weaponsRepository;
 
     @Autowired
     private final ModelMapper modelMapper;
 
-    public WeaponsServices(WeaponsRepositories weaponsRepository, ModelMapper modelMapper) {
+    public WeaponsServices(WeaponsRepository weaponsRepository, ModelMapper modelMapper) {
         this.weaponsRepository = weaponsRepository;
         this.modelMapper = modelMapper;
     }

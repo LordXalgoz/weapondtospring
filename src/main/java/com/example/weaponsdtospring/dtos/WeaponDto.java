@@ -9,5 +9,5 @@ public class WeaponDto {
     public String name;
     public int price;
     public double rating;
-    public Country countryName;
+    public String countryName;
 }
